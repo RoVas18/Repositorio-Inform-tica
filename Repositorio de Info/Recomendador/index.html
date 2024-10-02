@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador</title>
+</head>
+<body>
+    <div class="container">
+        <form action="javascript:void(0)">
+        <label for="genero">Seleccione su género</label>
+        <select id="genero" required>
+                <option id="M">Masculino</option>
+                <option id="F">Femenino</option>
+            </select><br>
+            <label for="edad">Ingrese su edad</label>
+            <input type="number" min="0" max="100" id="edad" required><br>
+            <button type="submit" id="submit" onclick="buscar()">Buscar</button>
+            <button type="reset" onclick="limpiar()">Limpiar</button>
+        </form>
+    </div>
+    <div class="respuesta" id="respuesta">
+        <h1>Estas son tus recomendaciones</h1>
+        <span id="datos"></span><br><br>
+        <h3>Canciones:</h3>
+        <div id="cancion"></div><br>
+        <h3>Películas:</h3>
+        <div id="peli"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

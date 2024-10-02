@@ -1,0 +1,91 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ccf1ed;
+  }
+  
+  .calculadora {
+    background-color: #ccf1ed; /* Manteniendo el tono rosa */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 300px; 
+    display: flex; /* Usamos flexbox para organizar los elementos verticalmente */
+    flex-direction: column; /* Pantalla arriba, botones abajo */
+  }
+  
+  /* Pantalla */
+  #output {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none; 
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: right;
+    height: 50px;
+    background-color: #fff; /* Fondo blanco para la pantalla */
+    color: #221919; 
+  }
+  
+  .botones { /* Contenedor para los botones */
+    display: flex;
+    flex-direction: column; /* Organizar botones en columnas */
+    flex-grow: 1; /* Permite que los botones ocupen el espacio restante */
+  }
+  
+  .operaciones, .numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #3797c4;  /* Botones rosa claro */
+    color: #333;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #6fe44c; 
+  }
+  
+  /* Botones de operaciones */
+  .numeros button:nth-child(4n) {
+    background-color: #ffb6c1; 
+  }
+  
+  .numeros button:nth-child(4n):hover {
+    background-color: #6eff69; 
+  }
+  
+  /* Botón de borrar (C) */
+  button[onclick="borrar()"] {
+    background-color: #78d8b3; 
+  }
+  
+  button[onclick="borrar()"]:hover {
+    background-color: #6978ff; 
+  }
+  
+  /* Botón de igual (=) */
+  button[onclick="calcular()"] {
+    background-color: #80f08f; 
+  }
+  
+  button[onclick="calcular()"]:hover {
+    background-color: #5fd665; 
+  }
+  
+  .numeros button {
+    margin: 5px; 
+  }
+  
